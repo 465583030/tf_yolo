@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 import cv2
 from time import time
-from yolow_ncs import YolowNCS
+from yolo_ncs import YoloNCS
 from imager import *
 import io
 
 imer = Imager()
-yl_ncs= YolowNCS()
+yl_ncs= YoloNCS()
 camera = PiCamera()
 camera.resolution = (800, 600)
 camera.framerate = 32

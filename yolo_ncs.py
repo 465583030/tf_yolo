@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os, sys, logging
 from argparse import ArgumentParser
 from openvino.inference_engine import IEPlugin, IENetwork
@@ -7,13 +8,13 @@ from predict import *
 logging.basicConfig(format='[%(levelname)s] %(message)s', level=logging.INFO, stream=sys.stdout)
 log=logging.getLogger()
 
-class YolowNCS(object):
+class YoloNCS(object):
 
     _ANCHORS = anchors_for_yolov3()
 
     def __init__(self, model_name=None):
         if model_name is None:
-            model_name = 'ir/frozen_yolow'
+            model_name = 'ir/frozen_yolo'
         self.model=model_name + '.xml'
         self.weights=model_name + '.bin'
         self.plugin=IEPlugin(device='MYRIAD')
