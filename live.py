@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import cv2
 from time import time
-from yolow import Yolow
+from yolow import Yolo
 from imager import *
 
 imer = Imager()
