@@ -31,7 +31,7 @@ while True:
         print('fps: {}'.format(frame_rate))
         
     frame_count += 1
-    cv2.imshow('YOLO v3 Live', frame)
+    cv2.imshow('yolo v3', frame)
 
     if cv2.waitKey(1) & 0xFF==ord('q'):
         break
