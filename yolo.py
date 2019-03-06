@@ -3,7 +3,7 @@ from yolov3 import *
 from predict import predict
 from load import Weight_loader
 
-class Yolow(Yolov3):
+class Yolo(Yolov3):
 
     sess = tf.Session()
     
@@ -34,12 +34,12 @@ class Yolow(Yolov3):
         graph_def = tf.graph_util.convert_variables_to_constants(sess=self.sess,
                                                                 input_graph_def=tf.get_default_graph().as_graph_def(),
                                                                 output_node_names=['detections/output'])
-        with tf.gfile.GFile('frozen_yolow.pb', 'wb') as f:
+        with tf.gfile.GFile('frozen_yolo.pb', 'wb') as f:
             f.write(graph_def.SerializeToString())
 
     def defrost(self):
-        with tf.gfile.GFile('frozen_yolow.pb', 'rb') as f:
+        with tf.gfile.GFile('frozen_yolo.pb', 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())
-        print('Found a frozen YOLOw model, defrost and use!')        
+        print('Found a frozen yolov3 model, defrost and use!')        
         tf.import_graph_def(graph_def)
