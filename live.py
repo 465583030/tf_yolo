@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 import cv2
 from time import time
-from yolow import Yolo
+from yolo import Yolo
 from imager import *
 
 imer = Imager()
-yl= Yolow()
+yl= Yolo()
 cam = cv2.VideoCapture(0)
 frame_interval = 1
 fps_display_interval = 5
