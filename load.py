@@ -11,7 +11,7 @@ class Weight_loader(object):
     
     def __init__(self, var_list, path=None):
         if path is None:
-            path='/bigdata/dataset/yolo/yolov3.weights'           
+            path='./yolov3.weights'           
         self.var_list = var_list
         self.file = Path(path)
         self.major = 0
