@@ -1,14 +1,6 @@
 # YOLOw
 A YOLOv3-416 implementation on TensorFlow Low-Level API
 
-![webp net-gifmaker 3](https://user-images.githubusercontent.com/18170028/52903429-d9288180-3225-11e9-8249-ed435b234931.gif)
-
-This is the thesis work I'm currently working on for my bachelor degree at [VAMK](http://www.puv.fi/en/ "VAMK's Homepage").
-
-**Thesis topic: Deploying YOLOv3 on Movidius Raspberry Pi (3B+).**
-
-I acknowledged that there are a lot of good works on YOLO already but since I am just so interested in this, and being also offered by my supervisor coincidentally, I just went on to make another version of my own.
-
 ## Summary:
 * The model was made in pure TensorFlow Low-Level API, detection outputs were processed in NumPy and OpenCV2 was used for image manipulations.
 * Non TensorFlow concise easy to use interface for loading, predicting on YOLOv3-416 model. (training to be added very soon)
