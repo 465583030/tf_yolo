@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import tensorflow as tf
 from darknet53 import Darknet53
 from utils import *
