@@ -17,3 +17,9 @@ develop-eggs
 lib
 lib64
 __pycache__
+target
+.idea
+.classpath
+.project
+.settings
+*.iml
